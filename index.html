@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Casino Landing</title>
+<style>
+body{
+  margin:0;
+  font-family:Georgia,serif;
+  background:radial-gradient(circle at top,#3b2a0a,#050505 65%);
+  color:#fff;
+  min-height:100vh;
+}
+.wrap{
+  max-width:1000px;
+  margin:0 auto;
+  padding:40px 20px;
+}
+.title{
+  text-align:center;
+  font-size:54px;
+  font-weight:800;
+}
+.sub{
+  text-align:center;
+  color:#9ca3af;
+  font-size:24px;
+  margin:10px 0 40px;
+}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:28px;
+}
+.card{
+  background:linear-gradient(180deg,rgba(40,28,10,.95),rgba(10,10,10,.96));
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:24px;
+  padding:24px;
+  box-shadow:0 20px 40px rgba(0,0,0,.35);
+  animation:float 4s ease-in-out infinite;
+  transition:transform .3s;
+  cursor:pointer;
+}
+.card:hover{transform:translateY(-6px)}
+.img{
+  height:220px;
+  border-radius:18px;
+  background-size:cover;
+  background-position:center;
+  transition:transform .4s;
+}
+.card:hover .img{transform:scale(1.05)}
+.card h2{font-size:42px;margin:20px 0 10px}
+.card p{font-size:22px;color:#cbd5e1;min-height:64px}
+.btn{
+  display:block;
+  text-align:center;
+  text-decoration:none;
+  background:linear-gradient(90deg,#d4af37,#f6e27a,#b8860b);
+  padding:18px;
+  border-radius:14px;
+  color:#fff;
+  font-size:28px;
+  font-weight:700;
+  margin-top:20px;
+  animation:glow 2s ease-in-out infinite;
+  transition:transform .2s;
+}
+.btn:hover{transform:scale(1.04)}
+.note{
+  text-align:center;
+  color:#94a3b8;
+  margin-top:30px;
+}
+@keyframes float{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-8px)}
+}
+@keyframes glow{
+  0%,100%{box-shadow:0 10px 25px rgba(212,175,55,.25)}
+  50%{box-shadow:0 14px 35px rgba(212,175,55,.55)}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="title">Выберите вариант</div>
+  <div class="sub">Нажмите, чтобы перейти</div>
+
+  <div class="grid">
+
+    <div class="card" onclick="window.open('https://example1.com','_blank')">
+      <div class="img" style="background-image:url('photo1.jpg')"></div>
+      <h2>Казино 1</h2>
+      <p>Лучшие бонусы и быстрые выплаты.</p>
+      <a class="btn" href="https://example1.com" target="_blank" rel="noopener noreferrer">Перейти</a>
+    </div>
+
+    <div class="card" onclick="window.open('https://example2.com','_blank')">
+      <div class="img" style="background-image:url('photo2.jpg')"></div>
+      <h2>Казино 2</h2>
+      <p>Популярные игры и акции каждый день.</p>
+      <a class="btn" href="https://example2.com" target="_blank" rel="noopener noreferrer">Перейти</a>
+    </div>
+
+  </div>
+
+  <div class="note">Загрузи на GitHub Pages как index.html</div>
+
+</div>
+</body>
+</html>
